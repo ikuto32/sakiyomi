@@ -1,0 +1,16 @@
+[package]
+name = "sakiyomi-kifu"
+description = "Shogi game records and positions: KIF, KI2, CSA, JKF, SFEN/USI, evaluation comments, hcp/psfen, hcpe/hcpe3/psv"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+shogi-core.workspace = true
+encoding_rs.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+
+[lints]
+workspace = true

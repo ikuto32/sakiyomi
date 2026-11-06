@@ -1,0 +1,22 @@
+[package]
+name = "sakiyomi-cli"
+description = "sakiyomi-tool: convert shogi books, game records, positions and databases; mine opening books"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "sakiyomi-tool"
+path = "src/main.rs"
+
+[dependencies]
+sakiyomi-app.workspace = true
+sakiyomi-book.workspace = true
+sakiyomi-usi.workspace = true
+spg.workspace = true
+serde_json.workspace = true
+clap = { version = "4", features = ["derive"] }
+
+[lints]
+workspace = true

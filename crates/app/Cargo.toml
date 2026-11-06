@@ -1,0 +1,20 @@
+[package]
+name = "sakiyomi-app"
+description = "Sakiyomi application layer: sessions, tools, jobs"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+sakiyomi-kifu.workspace = true
+sakiyomi-book.workspace = true
+sakiyomi-usi.workspace = true
+sakiyomi-spg.workspace = true
+spg.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+
+[lints]
+workspace = true

@@ -1,0 +1,23 @@
+[package]
+name = "spg"
+description = "Reference implementation of SPG (Shogi Position Graph) v1.0: .spg binary containers, .spgt text, .spgm manifests"
+version = "1.0.0"
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+keywords = ["shogi", "opening-book", "kifu", "file-format"]
+categories = ["encoding", "parser-implementations", "games"]
+# The specification's text (spec/SPG-v1.0.md) ships with the crate; the typeset PDF does not.
+exclude = ["spec/*.pdf"]
+
+[dependencies]
+xxhash-rust = { version = "0.8", features = ["xxh3"] }
+blake3 = { version = "1", default-features = false, features = ["std", "pure"] }
+ed25519-dalek = { version = "2", default-features = false, features = ["std", "fast"] }
+ruzstd = "0.8"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+xxhash-rust = { version = "0.8", features = ["xxh3"] }

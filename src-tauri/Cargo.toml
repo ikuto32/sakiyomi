@@ -1,0 +1,23 @@
+[package]
+name = "sakiyomi"
+description = "Sakiyomi (先読み): desktop shogi GUI for USI engines"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-clipboard-manager = "2"
+serde.workspace = true
+serde_json.workspace = true
+sakiyomi-app.workspace = true
+sakiyomi-book.workspace = true
+sakiyomi-kifu.workspace = true
+sakiyomi-usi.workspace = true
+sysinfo = { version = "0.33", default-features = false, features = ["system"] }
+nvml-wrapper = "0.10"

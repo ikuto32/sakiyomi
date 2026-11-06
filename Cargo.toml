@@ -1,0 +1,35 @@
+# Sakiyomi workspace. crates/shogi-core comes from the shogi_GPU_AI project (MIT).
+[workspace]
+members = ["crates/shogi-core", "crates/spg", "crates/spg-convert", "crates/kifu", "crates/book", "crates/usi", "crates/app", "crates/cli", "src-tauri"]
+resolver = "2"
+
+[workspace.package]
+version = "0.3.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT"
+authors = ["Sakiyomi contributors"]
+
+[workspace.dependencies]
+shogi-core = { path = "crates/shogi-core" }
+spg = { path = "crates/spg" }
+sakiyomi-spg = { path = "crates/spg-convert" }
+sakiyomi-kifu = { path = "crates/kifu" }
+sakiyomi-book = { path = "crates/book" }
+sakiyomi-usi = { path = "crates/usi" }
+sakiyomi-app = { path = "crates/app" }
+encoding_rs = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+unwrap_used = "warn"
+expect_used = "warn"
+panic = "warn"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
